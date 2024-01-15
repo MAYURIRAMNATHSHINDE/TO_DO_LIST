@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T0-Do-List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="To-Do-App">
+            <h2>To Do List <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRum6IG3MuWEqfrjXTWdyj4C3YhZ8nYdsFbfQ&usqp=CAU"></h2>
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text">
+            <button onclick="addTask()">ADD</button>
+        </div>
+        <div>
+            <ul id="list-container"></ul>
+            <button id="save-btn" onclick="saveData()">Save Data</button>
+        </div>
+        </div>     
+    </div> 
+    <script src="To_Do.js"></script>   
+</body>
+</html>
