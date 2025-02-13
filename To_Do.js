@@ -1,7 +1,6 @@
             const inputBox = document.getElementById("input-box");
             const listContainer = document.getElementById("list-container");
     
-            // Load data from localStorage on page load
             window.onload = function () {
                 if (localStorage.getItem("data")) {
                     listContainer.innerHTML = localStorage.getItem("data");
@@ -22,7 +21,7 @@
                 }
                 inputBox.value = "";
                 attachEventListenersToItems();
-                saveData(); // Save data after adding a task
+                saveData(); 
             }
     
             function saveData() {
@@ -30,7 +29,7 @@
             }
     
             function attachEventListenersToItems() {
-                // Attach event listeners to the newly added items
+               
                 const items = listContainer.getElementsByTagName("li");
                 for (let i = 0; i < items.length; i++) {
                     items[i].addEventListener("click", function (e) {
@@ -38,7 +37,7 @@
                             e.target.classList.toggle("checked");
                         } else if (e.target.tagName === "SPAN") {
                             e.target.parentElement.remove();
-                            saveData(); // Save data after removing a task
+                            saveData(); 
                         }
                     }, false);
                 }
